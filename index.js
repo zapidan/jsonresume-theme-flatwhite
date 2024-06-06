@@ -14,7 +14,28 @@ handlebars.registerHelper({
   eq: (a, b) => a === b,
 });
 
+function groupPositions(work) {
+  let groups = [];
+  for (const position of work) {
+    if (!groups[position.name]) {
+      groups[position.name] = {...position, positions: []};
+    }
+      
+    groups[position.name].positions.push(position);
+  }
+
+  let retVal = [];
+  for (const key in groups) {
+    retVal.push(groups[key]);
+  }
+  
+  return retVal;
+}
+
 function render(resume) {
+  const groupedPositions = groupPositions(resume.work);
+  resume.work = groupedPositions;
+
   const dir = `${__dirname}/src`;
   const css = fs.readFileSync(`${dir}/style.css`, 'utf-8');
   const resumeTemplate = fs.readFileSync(`${dir}/resume.hbs`, 'utf-8');

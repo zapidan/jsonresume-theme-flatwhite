@@ -9,32 +9,51 @@ handlebars.registerHelper({
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
-  formatDate: date => moment(date).format('MM/YYYY'),
+  formatDate: date => moment(date).format('MMM YYYY'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
 });
 
-function groupPositions(work) {
-  let groups = [];
+// Creates a string representation of the duration in a role in the format `1 yrs 10 mos'
+function getDurationString(startDateString, endDateString) {
+  const endDate = endDateString ? moment(endDateString) : moment();
+  const delta = moment.duration(endDate.diff(startDateString));
+  return `${delta.years()} yrs ${delta.months()} mos`;
+}
+
+// Groups Positions by Company for presentation purposes
+function groupPositionsByCompany(work) {
+  let companies = [];
+
   for (const position of work) {
-    if (!groups[position.name]) {
-      groups[position.name] = {...position, positions: []};
+
+    // Is this a company that we've seen before?
+    if (!companies[position.name]) {
+      companies[position.name] = {...position, positions: []};
     }
-      
-    groups[position.name].positions.push(position);
+    
+    // Calculate the duration in the role
+    const durationInRole = getDurationString(position.startDate, position?.endDate);
+
+    // Associate the role with the specified company
+    companies[position.name].positions.push({...position, duration: durationInRole});
+
+    // Update the cumulative start and end dates overall for the specific company, and calculate the overall duration
+    companies[position.name].startDate = moment.min(moment(position.startDate), moment(companies[position.name].startDate)).format('YYYY-MM');
+    companies[position.name].endDate = moment.max(moment(position.endDate), moment(companies[position.name].endDate)).format('YYYY-MM');
+    companies[position.name].duration = getDurationString(companies[position.name].startDate, companies[position.name]?.endDate);
   }
 
   let retVal = [];
-  for (const key in groups) {
-    retVal.push(groups[key]);
+  for (const key in companies) {
+    retVal.push(companies[key]);
   }
   
   return retVal;
 }
 
 function render(resume) {
-  const groupedPositions = groupPositions(resume.work);
-  resume.work = groupedPositions;
+  resume.work = groupPositionsByCompany(resume.work);
 
   const dir = `${__dirname}/src`;
   const css = fs.readFileSync(`${dir}/style.css`, 'utf-8');

@@ -390,3 +390,44 @@ ul.two-column li {
   background: ghostwhite;
   border-radius: 5px;
 }
+
+.position {
+  padding-top: .5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.position .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.position .header h3 {
+  flex-grow: 1;
+  padding-left: .5em;
+}
+
+.position .bullet {
+    content: "\A";
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.position ul {
+  margin: .5em 0 0 1em;
+  padding: 0em;
+}
+
+.position .body {
+  margin-left: .175em;
+  padding-left: .65em;
+  padding-bottom: 1em;
+  border-left: solid rgba(0, 0, 0, 0.3) .15em;
+}
+
+.position .blank {
+  border-color: transparent;
+}

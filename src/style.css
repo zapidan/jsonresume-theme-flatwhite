@@ -428,6 +428,7 @@ ul.two-column li {
   border-left: solid rgba(0, 0, 0, 0.3) .15em;
 }
 
-.position .blank {
+.position .last {
   border-color: transparent;
+  padding-bottom: 0em;
 }

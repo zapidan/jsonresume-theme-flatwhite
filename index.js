@@ -12,6 +12,7 @@ handlebars.registerHelper({
   formatDate: date => moment(date).format('MMM YYYY'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
+  split: s => s.split('\n'),
 });
 
 // Creates a string representation of the duration in a role in the format `1 yrs 10 mos'

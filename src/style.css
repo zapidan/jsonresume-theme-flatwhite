@@ -204,6 +204,13 @@ section {
   margin-top: .75em;
 }
 
+.chip {
+  margin: .15em;
+  padding: .15em;
+  background: ghostwhite;
+  border-radius: 5px;
+}
+
 /* Header Section */
 .header {
   display: flex;
@@ -243,6 +250,21 @@ section {
 /* Summary Section */
 .summary {
   margin: 5px 0 5px;
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+}
+
+.skills-header {
+  display: flex;
+  flex-direction: column;
+  min-width: 12%;
+  margin-right: .5em;
+  text-align: end;
 }
 
 .keyline {
@@ -394,17 +416,6 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.main-skill {
-  font-size: 80%;
-}
-
-.skill {
-  margin: .15em;
-  padding: .15em;
-  background: ghostwhite;
-  border-radius: 5px;
 }
 
 .company {

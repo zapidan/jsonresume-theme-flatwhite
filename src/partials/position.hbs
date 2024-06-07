@@ -1,31 +1,35 @@
 <section class="position">
   <div class="header">
     {{#if position}}
-
-    <div class="bullet"></div>
-    <h3 class="bold">{{position}}</h3>
-
-    <h5 class="italic">
-        {{#if startDate}}
-            <span class="startDate">{{formatDate startDate}}</span>
-            {{#if endDate}}
-            <span class="endDate"> - {{formatDate endDate}}</span>
-            {{else}}
-            <span class="endDate"> - Present</span>
-            {{/if}}
-        {{else if releaseDate}}
-            {{formatDate releaseDate}}
-        {{/if}}
-    </h5>
-
+      <div class="bullet"></div>
+      <h3 class="bold">{{position}}</h3>
     {{/if}}
-
   </div>
 
-  <div class="body">
+  <div class="content">
+    {{#if startDate}}
+      <h6>
+        <i class="fa fa-calendar"></i>
+        <span class="startDate">{{formatDate startDate}}</span>
+        {{#if endDate}}
+          <span class="endDate"> - {{formatDate endDate}}</span>
+        {{else}}
+          <span class="endDate"> - Present</span>
+        {{/if}}
+      </h6>
+    {{/if}}
+
+    {{#if duration}}
+      <h6>
+        <i class="fa fa-clock-o"></i>
+        <span>{{duration}}</span>
+      </h6>
+    {{/if}}
 
     {{#if summary}}
-    <p class="summary">{{summary}}</p>
+      {{#each (split summary) }}
+        <p>{{this}}</p>
+      {{/each}}
     {{/if}}
 
     {{#if highlights.length}}
@@ -35,16 +39,5 @@
         {{/each}}
     </ul>
     {{/if}}
-
-    <!--
-    {{#if keywords.length}}
-    <div class="flex-container">
-        {{#each keywords}}
-            <h6 class="skill">{{.}}</h6>
-        {{/each}}
-    </div>
-    {{/if}}
-    -->
-
   </div>
 </section>

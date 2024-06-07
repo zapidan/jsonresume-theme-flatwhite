@@ -131,6 +131,7 @@ h6 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 10px;
+  color: gray;
 }
 
 a {
@@ -195,6 +196,10 @@ ul.two-column li {
   padding-left: 0;
 }
 
+i {
+  margin-right: .1em;
+}
+
 @page {
   size: A4;
 }
@@ -225,6 +230,7 @@ section {
   padding: .15em;
   background: ghostwhite;
   border-radius: 5px;
+  color: black;
 }
 
 /* Header Section */
@@ -314,6 +320,8 @@ section {
 .position {
   display: flex;
   flex-direction: column;
+  margin-left: .25em;
+  gap: .25em;
 }
 
 .position .header {
@@ -335,16 +343,20 @@ section {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.position .body {
+.position .content {
   display: flex;
   flex-direction: column;
+  gap: .25em;
   margin-left: .175em;
   padding-left: .65em;
-  padding-bottom: 1em;
   border-left: solid rgba(0, 0, 0, 0.3) .15em;
 }
 
-.position .body ul {
+.position .content p {
+  margin: 0;
+}
+
+.position .content ul {
   margin: 0 0 0 1em;
   padding: 0em;
 }

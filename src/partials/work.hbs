@@ -1,106 +1,116 @@
 {{#if resume.work.length}}
-<div class="container work-container">
+<section>
     {{> title value="Experience"}}
 
     {{#each resume.work}}
-        <section class="item">
-            <div class="company">
-                {{#if name}}
-                    <h3 class="bold">
-                        {{#if url}}
-                            <a href="{{url}}" target="_blank">{{name}}</a>
-                        {{else}}
-                            {{name}}
-                        {{/if}}
-                    </h3>
-                {{/if}}
-                {{#if startDate}}
-                    <h4>
-                        <span class="startDate">{{formatDate startDate}}</span>
-                        {{#if endDate}}
-                        <span class="endDate"> - {{formatDate endDate}}</span>
-                        {{else}}
-                        <span class="endDate"> - Present</span>
-                        {{/if}}
-                        {{#if duration}}
-                        <span class="duration"> · {{duration}}</h4>
-                        {{/if}}
-                    </h4>
-                {{/if}}
-
-                {{#if location}}
-                    <h4>{{location}}</h4>
-                {{/if}}
-
-                {{#if description}}
-                    <p>{{description}}</p>
-                {{/if}}
-
-                {{#if this.keywords.length}}
-                <div class="flex-container">
-                    {{#each this.keywords}}
-                        <h6 class="skill">{{.}}</h6>
-                    {{/each}}
-                </div>
-                {{/if}}
-            </div>
-
-            <div class="position">
-
-            {{#each this.positions}}
-                <div class="header">
-
-                {{#if this.position}}
-                <!-- {{> section-header name=this.position description=""}} -->
-                <div class="bullet"></div>
-                <h3 class="bold">{{this.position}}</h3>
-
-                <h5 class="italic">
-                    {{#if this.startDate}}
-                        <span class="startDate">{{formatDate this.startDate}}</span>
-                        {{#if this.endDate}}
-                        <span class="endDate"> - {{formatDate this.endDate}}</span>
-                        {{else}}
-                        <span class="endDate"> - Present</span>
-                        {{/if}}
-                    {{else if this.releaseDate}}
-                        {{formatDate this.releaseDate}}
+        <section class="company">
+            <div class="header">
+                <div class="title">
+                    {{#if name}}
+                        <h3 class="bold">
+                            {{#if url}}
+                                <a href="{{url}}" target="_blank">{{name}}</a>
+                            {{else}}
+                                {{name}}
+                            {{/if}}
+                        </h3>
                     {{/if}}
-                </h5>
 
-                {{/if}}
+                    {{#if description}}
+                        <h6>{{description}}</h6>
+                    {{/if}}
 
+                    {{#if this.keywords.length}}
+                    <div class="flex-container">
+                        {{#each this.keywords}}
+                            <h6 class="chip">{{.}}</h6>
+                        {{/each}}
+                    </div>
+                    {{/if}}
                 </div>
+                <div class="about">
+                    {{#if startDate}}
+                        <h6>
+                            <i class="fa fa-calendar"></i>
+                            <span class="startDate">{{formatDate startDate}}</span>
+                            {{#if endDate}}
+                            <span class="endDate"> - {{formatDate endDate}}</span>
+                            {{else}}
+                            <span class="endDate"> - Present</span>
+                            {{/if}}
+                        </h6>
+                    {{/if}}
 
-                <div class="body {{#if @last}}last{{/if}}">
+                    {{#if duration}}
+                        <h6>
+                            <i class="fa fa-calendar"></i>
+                            <span>{{duration}}</span>
+                        </h6>
+                    {{/if}}
 
-                {{#if this.summary}}
-                <p class="summary">{{this.summary}}</p>
-                {{/if}}
-
-                {{#if this.highlights.length}}
-                <ul>
-                    {{#each this.highlights}}
-                    <li>{{.}}</li>
-                    {{/each}}
-                </ul>
-                {{/if}}
-
-                <!--
-                {{#if this.keywords.length}}
-                <div class="flex-container">
-                    {{#each this.keywords}}
-                        <h6 class="skill">{{.}}</h6>
-                    {{/each}}
+                    {{#if location}}
+                        <h6>
+                            <i class="fa fa-map-marker"></i>
+                            <span>{{location}}</span>
+                        </h6>
+                    {{/if}}
                 </div>
-                {{/if}}
-                -->
-
-                </div>
-
-            {{/each}}
             </div>
         </section>
+
+        {{#each this.positions}}
+            <section class="position">
+                <div class="header">
+
+                    {{#if this.position}}
+                    <!-- {{> section-header name=this.position description=""}} -->
+                    <div class="bullet"></div>
+                    <h3 class="bold">{{this.position}}</h3>
+
+                    <h5 class="italic">
+                        {{#if this.startDate}}
+                            <span class="startDate">{{formatDate this.startDate}}</span>
+                            {{#if this.endDate}}
+                            <span class="endDate"> - {{formatDate this.endDate}}</span>
+                            {{else}}
+                            <span class="endDate"> - Present</span>
+                            {{/if}}
+                        {{else if this.releaseDate}}
+                            {{formatDate this.releaseDate}}
+                        {{/if}}
+                    </h5>
+
+                    {{/if}}
+
+                </div>
+
+                <div class="body">
+
+                    {{#if this.summary}}
+                    <p class="summary">{{this.summary}}</p>
+                    {{/if}}
+
+                    {{#if this.highlights.length}}
+                    <ul>
+                        {{#each this.highlights}}
+                        <li>{{.}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+
+                    <!--
+                    {{#if this.keywords.length}}
+                    <div class="flex-container">
+                        {{#each this.keywords}}
+                            <h6 class="skill">{{.}}</h6>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                    -->
+
+                </div>
+            </section>
+        {{/each}}
     {{/each}}
-</div>
+</section>
 {{/if}}

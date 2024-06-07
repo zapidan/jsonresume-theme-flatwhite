@@ -204,6 +204,22 @@ section {
   margin-top: .75em;
 }
 
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #56817A;
+}
+
+.sublink {
+  font-size: 70%;
+  font-weight: 200;
+  color: dimgray;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
 .chip {
   margin: .15em;
   padding: .15em;
@@ -267,20 +283,75 @@ section {
   text-align: end;
 }
 
-.keyline {
-  width: 45px;
-  margin: 8px 0 10px;
-  border-top: 1px solid #56817A;
+/* Work Section */
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  margin-bottom: .5em;
 }
 
-.sublink {
-  font-size: 70%;
-  font-weight: 200;
-  color: dimgray;
+.company .header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-.capitalize {
-  text-transform: capitalize;
+.company .header .title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: .25em;
+}
+
+.company .header .about {
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+  min-width: 20%;
+}
+
+.position {
+  display: flex;
+  flex-direction: column;
+}
+
+.position .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.position .header h3 {
+  flex-grow: 1;
+  padding-left: .5em;
+}
+
+.position .bullet {
+    content: "\A";
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.position .body {
+  display: flex;
+  flex-direction: column;
+  margin-left: .175em;
+  padding-left: .65em;
+  padding-bottom: 1em;
+  border-left: solid rgba(0, 0, 0, 0.3) .15em;
+}
+
+.position .body ul {
+  margin: 0 0 0 1em;
+  padding: 0em;
+}
+
+.position .last {
+  border-color: transparent;
+  padding-bottom: 0em;
 }
 
 /* Layouts */
@@ -314,14 +385,6 @@ section {
   overflow: hidden;
 }
 
-.item {
-  margin-bottom: 15px;
-}
-
-.item:last-child {
-  margin-bottom: 0;
-}
-
 @media print {
   body {
     margin: 0;
@@ -334,22 +397,18 @@ section {
     box-shadow: none;
   }
 
-  /* FIXME: Leaning on Header and Sections */
-  .page .resume-header
-  .page .resume-content {
-    padding: 0 22px 0 34px;
-  }
-
-  .company * {
-    page-break-inside: avoid;
-  }
-
-  .position * {
+  section {
     page-break-inside: avoid;
   }
 
   .fa-external-link {
     display: none;
+  }
+
+  /* FIXME: Leaning on Header and Sections */
+  .page .resume-header
+  .page .resume-content {
+    padding: 0 22px 0 34px;
   }
 }
 
@@ -416,60 +475,4 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.company {
-  display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  margin-bottom: .5em;
-}
-
-.company p {
-  margin-top: .25em;
-  margin-bottom: .5em;
-  text-align: justify;
-}
-
-.position {
-  display: flex;
-  flex-direction: column;
-}
-
-.position .header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.position .header h3 {
-  flex-grow: 1;
-  padding-left: .5em;
-}
-
-.position .bullet {
-    content: "\A";
-    width: .5em;
-    height: .5em;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.position .body {
-  display: flex;
-  flex-direction: column;
-  margin-left: .175em;
-  padding-left: .65em;
-  padding-bottom: 1em;
-  border-left: solid rgba(0, 0, 0, 0.3) .15em;
-}
-
-.position .body ul {
-  margin: 0 0 0 1em;
-  padding: 0em;
-}
-
-.position .last {
-  border-color: transparent;
-  padding-bottom: 0em;
 }

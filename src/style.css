@@ -200,7 +200,7 @@ ul.two-column li {
  
 /* General */
 section {
-  margin-top: .5em;
+  margin-top: .75em;
 }
 
 /* Header Section */
@@ -316,6 +316,7 @@ section {
     box-shadow: none;
   }
 
+  /* FIXME: Leaning on Header and Sections */
   .page .resume-header
   .page .resume-content {
     padding: 0 22px 0 34px;

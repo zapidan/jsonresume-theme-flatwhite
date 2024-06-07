@@ -326,6 +326,10 @@ section {
   gap: .25em;
 }
 
+.last {
+  margin-bottom: 1em;
+}
+
 .position .header {
   display: flex;
   flex-direction: row;

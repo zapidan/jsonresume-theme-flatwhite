@@ -304,11 +304,11 @@ ul.two-column li {
     padding: 0 22px 0 34px;
   }
 
-  .container {
+  .company * {
     page-break-inside: avoid;
   }
 
-  .work-container .item {
+  .position * {
     page-break-inside: avoid;
   }
 

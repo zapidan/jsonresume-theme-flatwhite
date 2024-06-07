@@ -6,13 +6,13 @@
         <section class="item">
             <div class="company">
                 {{#if name}}
-                <h3 class="bold">
-                    {{#if url}}
-                        <a href="{{url}}" target="_blank">{{name}}</a>
-                    {{else}}
-                        {{name}}
-                    {{/if}}
-                </h3>
+                    <h3 class="bold">
+                        {{#if url}}
+                            <a href="{{url}}" target="_blank">{{name}}</a>
+                        {{else}}
+                            {{name}}
+                        {{/if}}
+                    </h3>
                 {{/if}}
                 {{#if startDate}}
                     <h4>
@@ -33,7 +33,7 @@
                 {{/if}}
 
                 {{#if description}}
-                    <p class="italic">{{description}}</p>
+                    <p>{{description}}</p>
                 {{/if}}
 
                 {{#if this.keywords.length}}

@@ -3,61 +3,7 @@
     {{> title value="Experience"}}
 
     {{#each resume.work}}
-        <section class="company">
-            <div class="header">
-                <div class="title">
-                    {{#if name}}
-                        <h3 class="bold">
-                            {{#if url}}
-                                <a href="{{url}}" target="_blank">{{name}}</a>
-                            {{else}}
-                                {{name}}
-                            {{/if}}
-                        </h3>
-                    {{/if}}
-
-                    {{#if description}}
-                        <h6>{{description}}</h6>
-                    {{/if}}
-
-                    {{#if this.keywords.length}}
-                    <div class="flex-container">
-                        {{#each this.keywords}}
-                            <h6 class="chip">{{.}}</h6>
-                        {{/each}}
-                    </div>
-                    {{/if}}
-                </div>
-                <div class="about">
-                    {{#if startDate}}
-                        <h6>
-                            <i class="fa fa-calendar"></i>
-                            <span class="startDate">{{formatDate startDate}}</span>
-                            {{#if endDate}}
-                            <span class="endDate"> - {{formatDate endDate}}</span>
-                            {{else}}
-                            <span class="endDate"> - Present</span>
-                            {{/if}}
-                        </h6>
-                    {{/if}}
-
-                    {{#if duration}}
-                        <h6>
-                            <i class="fa fa-clock-o"></i>
-                            <span>{{duration}}</span>
-                        </h6>
-                    {{/if}}
-
-                    {{#if location}}
-                        <h6>
-                            <i class="fa fa-map-marker"></i>
-                            <span>{{location}}</span>
-                        </h6>
-                    {{/if}}
-                </div>
-            </div>
-        </section>
-
+        {{> company}}
         {{#each this.positions}}
             <section class="position">
                 <div class="header">

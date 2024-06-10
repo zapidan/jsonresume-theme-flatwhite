@@ -5,7 +5,7 @@
   --gap-tiny: .165em;
   --gap-small: .25em;
   --gap-medium: .5em;
-  --gap-large: .65em;
+  --gap-large: .75em;
   --gap-xlarge: 1em;
 }
 
@@ -216,7 +216,7 @@ i {
  
 /* General */
 section {
-  margin-top: .75em;
+  margin-top: var(--gap-large);
 }
 
 .keyline {
@@ -280,6 +280,10 @@ section {
 
 .centre {
   justify-content: center;
+}
+
+.narrow {
+  margin-top: var(--gap-small);
 }
 
 .spread {

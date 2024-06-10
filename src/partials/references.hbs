@@ -1,20 +1,28 @@
-{{#if resume.references.length}}
-<div class="container references-container">
+<section>
     {{> title value="References"}}
+    {{#if resume.references.length}}
+        {{#each resume.references}}
+            <section class="reference">
+                <div class="column">
+                    <div class="row">
+                        {{#if reference}}
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <blockquote class="main">
+                            {{reference}}
+                        </blockquote>
+                        {{/if}}
+                    </div>
 
-    {{#each resume.references}}
-        <section class="item clearfix">
-            {{#if reference}}
-            <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
-            <blockquote>
-                {{reference}}
-            </blockquote>
-            {{/if}}
-
-            {{#if name}}
-            <h5 class="pull-right"> — {{name}}</h5>
-            {{/if}}
-        </section>
-    {{/each}}
-</div>
-{{/if}}
+                    {{#if name}}
+                        <h5 class="right">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                            {{name}}
+                        </h5>
+                    {{/if}}
+                </div>
+            </section>
+        {{/each}}
+    {{else}}
+        <h6>References are available on request</h6>
+    {{/if}}
+</section>

@@ -159,7 +159,8 @@ blockquote {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: italic;
-  margin: 10px 25px;
+  margin: 0;
+  text-align: justify;
 }
 
 em {
@@ -372,13 +373,14 @@ section {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  gap: .25em;
   margin-bottom: .25em;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  gap: .25em;
+
 }
 
 .main {
@@ -387,7 +389,16 @@ section {
 }
 
 .meta {
-  align-items: flex-end; 
+  align-self: flex-end; 
+}
+
+/* Reference Section */
+.left {
+  align-self: flex-start;
+}
+
+.right {
+  align-self: flex-end;
 }
 
 

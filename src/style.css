@@ -3,6 +3,9 @@
 :root {
   --color-bg-primary: white;
   --color-bg-secondary: #56817A;
+  --color-bg-tertiary: rgb(240,240,240);
+  --color-primary: black;
+  --color-secondary: grey;
   --gap-micro: .1em;
   --gap-tiny: .165em;
   --gap-small: .25em;
@@ -238,11 +241,11 @@ section {
 }
 
 .chip {
-  margin: .15em;
-  padding: .15em;
-  background: ghostwhite;
+  margin: var(--gap-tiny);
+  padding: var(--gap-small);
+  background: var(--color-bg-tertiary);
   border-radius: 5px;
-  color: black;
+  color: var(--color-primary);
 }
 
 .bullet {
@@ -274,6 +277,10 @@ section {
 
 .fill {
   flex-grow: 1;
+}
+
+.fit {
+  min-width: fit-content;
 }
 
 .end {
@@ -316,10 +323,6 @@ section {
 }
 
 /* Work Section */
-.last {
-  margin-bottom: 1em;
-}
-
 .align-center {
   align-items: center;
 }
@@ -360,18 +363,6 @@ section {
   content: "";
   display: table;
   clear: both;
-}
-
-.left-column {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
-  word-wrap: break-word;
-}
-
-.right-column {
-  width: auto;
-  overflow: hidden;
 }
 
 /* Components */
@@ -419,12 +410,6 @@ section {
   vertical-align: middle;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 /* Adjustments for Printing */
 @media print {
   body {
@@ -442,7 +427,7 @@ section {
     page-break-inside: avoid;
   }
 
-  .profiles {
+  .no-print {
     display: none;
   }
 

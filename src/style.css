@@ -380,7 +380,7 @@ section {
 .column {
   display: flex;
   flex-direction: column;
-
+  gap: .25em;
 }
 
 .main {
@@ -389,7 +389,7 @@ section {
 }
 
 .meta {
-  align-self: flex-end; 
+  align-items: flex-end; 
 }
 
 /* Reference Section */

@@ -1,7 +1,7 @@
 /* Variables */
 
 :root {
-  --color-bg-primary: cornflowerblue;
+  --color-bg-primary: white;
   --color-bg-secondary: #56817A;
   --gap-micro: .1em;
   --gap-tiny: .165em;
@@ -338,16 +338,6 @@ section {
   margin-top: var(--gap-medium);
 }
 
-/* Education Section */
-.main {
-  align-items: flex-start;
-  flex-grow: 1;
-}
-
-.meta {
-  align-items: flex-end; 
-}
-
 /* Reference Section */
 .left {
   align-self: flex-start;
@@ -359,7 +349,7 @@ section {
 
 /* Layouts */
 .page {
-  background: white;
+  background: var(--color-bg-primary);
   width: 612px;
   min-height: 792px;
   display: flex;

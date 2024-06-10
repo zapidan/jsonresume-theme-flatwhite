@@ -1,10 +1,10 @@
 {{#if resume.education.length}}
-<section class="education">
+<section>
     {{> title value="Education"}}
     
     {{#each resume.education}}
         <div class="row">
-            <div class="column main">
+            <div class="column fill">
                 {{#if institution}}
                     <h3 class="bold">
                         {{#if this.url}}
@@ -22,7 +22,7 @@
                 </h4>
             </div>
 
-            <div class="column meta">
+            <div class="column end">
                 {{#if startDate}}
                     <h6>
                         <i class="fa fa-calendar"></i>

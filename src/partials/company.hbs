@@ -1,6 +1,6 @@
-<section class="company">
-  <div class="header">
-      <div class="title">
+<section>
+  <div class="row">
+      <div class="column fill">
           {{#if name}}
               <h3 class="bold">
                   {{#if url}}
@@ -16,22 +16,22 @@
           {{/if}}
 
           {{#if this.keywords.length}}
-          <div class="flex-container">
+          <div class="row wrap">
               {{#each this.keywords}}
                   <h6 class="chip">{{.}}</h6>
               {{/each}}
           </div>
           {{/if}}
       </div>
-      <div class="about">
+      <div class="column end">
           {{#if startDate}}
               <h6>
                   <i class="fa fa-calendar"></i>
-                  <span class="startDate">{{formatDate startDate}}</span>
+                  <span>{{formatDate startDate}}</span>
                   {{#if endDate}}
-                  <span class="endDate"> - {{formatDate endDate}}</span>
+                  <span> - {{formatDate endDate}}</span>
                   {{else}}
-                  <span class="endDate"> - Present</span>
+                  <span> - Present</span>
                   {{/if}}
               </h6>
           {{/if}}

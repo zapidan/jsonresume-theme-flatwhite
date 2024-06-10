@@ -307,33 +307,6 @@ section {
 }
 
 /* Work Section */
-.company {
-  display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  margin-bottom: .5em;
-}
-
-.company .header {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.company .header .title {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: .25em;
-}
-
-.company .header .about {
-  display: flex;
-  flex-direction: column;
-  gap: .25em;
-  min-width: 20%;
-}
-
 .position {
   display: flex;
   flex-direction: column;

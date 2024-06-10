@@ -2,9 +2,11 @@
 
 :root {
   --main-bg-color: cornflowerblue;
+  --gap-tiny: .165em;
   --gap-small: .25em;
   --gap-medium: .5em;
-  --gap-large: 1em;
+  --gap-large: .65em;
+  --gap-xlarge: 1em;
 }
 
 
@@ -242,10 +244,11 @@ section {
 }
 
 .bullet {
-  width: .5em;
-  height: .5em;
+  width: var(--gap-medium);
+  height: var(--gap-medium);
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
+  margin-right: var(--gap-small);
 }
 
 /* Common */
@@ -308,45 +311,25 @@ section {
 
 /* Work Section */
 .position {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
-  margin-left: .25em;
-  margin-bottom: .3em;
-  gap: .25em;
+  margin-top: var(--gap-medium);
 }
 
 .last {
   margin-bottom: 1em;
 }
 
-.position .header {
-  display: flex;
-  flex-direction: row;
+.align-center {
   align-items: center;
 }
 
-.position .header h3 {
-  flex-grow: 1;
-  padding-left: .5em;
-}
-
-.position .content {
-  display: flex;
-  flex-direction: column;
-  gap: .25em;
-  margin-left: .175em;
-  padding-left: .65em;
+.line {
+  margin-left: var(--gap-tiny);
+  padding-left: calc(var(--gap-xlarge) - var(--gap-small));
   border-left: solid rgba(0, 0, 0, 0.3) .15em;
 }
 
-.position .content p {
-  margin: 0;
-}
-
-.position .last {
-  border-color: transparent;
-  padding-bottom: 0em;
+.space {
+  margin-top: var(--gap-medium);
 }
 
 /* Education Section */

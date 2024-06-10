@@ -1,44 +1,46 @@
 
 {{#if position}}
-<section class="position {{#if @last}}last{{/if}}">
-  <div class="header">
-      <div class="bullet"></div>
-      <h3 class="bold">{{position}}</h3>
-  </div>
+<section>
+  <div class="column position"></div>
+    <div class="row align-center">
+        <div class="bullet"></div>
+        <h3 class="bold">{{position}}</h3>
+    </div>
 
-  <div class="content">
-    {{#if startDate}}
-      <h6>
-        <i class="fa fa-calendar"></i>
-        <span class="startDate">{{formatDate startDate}}</span>
-        {{#if endDate}}
-          <span class="endDate"> - {{formatDate endDate}}</span>
-        {{else}}
-          <span class="endDate"> - Present</span>
-        {{/if}}
-      </h6>
-    {{/if}}
+    <div class="column line">
+      {{#if startDate}}
+        <h6 class="space">
+          <i class="fa fa-calendar"></i>
+          <span>{{formatDate startDate}}</span>
+          {{#if endDate}}
+            <span> - {{formatDate endDate}}</span>
+          {{else}}
+            <span> - Present</span>
+          {{/if}}
+        </h6>
+      {{/if}}
 
-    {{#if duration}}
-      <h6>
-        <i class="fa fa-clock-o"></i>
-        <span>{{duration}}</span>
-      </h6>
-    {{/if}}
+      {{#if duration}}
+        <h6>
+          <i class="fa fa-clock-o"></i>
+          <span>{{duration}}</span>
+        </h6>
+      {{/if}}
 
-    {{#if summary}}
-      {{#each (split summary) }}
-        <p>{{this}}</p>
-      {{/each}}
-    {{/if}}
-
-    {{#if highlights.length}}
-    <ul>
-        {{#each highlights}}
-        <li>{{.}}</li>
+      {{#if summary}}
+        {{#each (split summary) }}
+          <p>{{this}}</p>
         {{/each}}
-    </ul>
-    {{/if}}
+      {{/if}}
+
+      {{#if highlights.length}}
+      <ul>
+          {{#each highlights}}
+          <li>{{.}}</li>
+          {{/each}}
+      </ul>
+      {{/if}}
+    </div>
   </div>
 </section>
 {{/if}}

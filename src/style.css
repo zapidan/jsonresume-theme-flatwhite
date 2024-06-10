@@ -259,7 +259,12 @@ section {
 .column {
   display: flex;
   flex-direction: column;
-  gap: .25em;
+  align-items: flex-start;
+  gap: var(--gap-small);
+}
+
+.top {
+  align-items: first baseline;
 }
 
 .fill {
@@ -277,6 +282,11 @@ section {
 .spread {
   gap: var(--gap-large);
 }
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 /* Header Section */
 .profile-pic {
   margin-top: -5px;
@@ -292,17 +302,8 @@ section {
 
 /* Skills Section */
 .skills {
-  display: flex;
-  flex-direction: row;
-  align-items: first baseline;
-}
-
-.skills-header {
-  display: flex;
-  flex-direction: column;
   min-width: 12%;
-  margin-right: .5em;
-  text-align: end;
+  margin-right: var(--gap-medium);
 }
 
 /* Work Section */

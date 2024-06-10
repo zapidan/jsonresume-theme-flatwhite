@@ -2,8 +2,8 @@
     <section>
         {{> title value="Skills"}}
         {{#each resume.skills}}
-            <section class="skills">
-                <div class="skills-header">
+            <div class="row top">
+                <div class="column end skills">
                     {{#if name}}
                         <h4 class="bold capitalize">{{name}}</h4>
                     {{/if}}
@@ -12,13 +12,13 @@
                     {{/if}}
                 </div>
                 {{#if keywords.length}}
-                    <div class="minimal flex-container">
+                    <div class="row wrap minimal">
                         {{#each keywords}}
                             <h6 class="chip">{{.}}</h6>
                         {{/each}}
                     </div>
                 {{/if}}
-            </section>
+            </div>
         {{/each}}
     </section>
 {{/if}}

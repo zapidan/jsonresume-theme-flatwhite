@@ -234,6 +234,14 @@ section {
   color: black;
 }
 
+.bullet {
+  width: .5em;
+  height: .5em;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
 /* Header Section */
 .header {
   display: flex;
@@ -340,14 +348,6 @@ section {
 .position .header h3 {
   flex-grow: 1;
   padding-left: .5em;
-}
-
-.position .bullet {
-    content: "\A";
-    width: .5em;
-    height: .5em;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .position .content {

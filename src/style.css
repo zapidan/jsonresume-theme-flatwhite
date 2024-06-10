@@ -1,7 +1,9 @@
 /* Variables */
 
 :root {
-  --main-bg-color: cornflowerblue;
+  --color-bg-primary: cornflowerblue;
+  --color-bg-secondary: #56817A;
+  --gap-micro: .1em;
   --gap-tiny: .165em;
   --gap-small: .25em;
   --gap-medium: .5em;
@@ -222,7 +224,7 @@ section {
 .keyline {
   width: 45px;
   margin: 8px 0 10px;
-  border-top: 1px solid #56817A;
+  border-top: solid var(--color-bg-secondary) var(--gap-micro);
 }
 
 .sublink {
@@ -247,7 +249,7 @@ section {
   width: var(--gap-medium);
   height: var(--gap-medium);
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--color-bg-secondary);
   margin-right: var(--gap-small);
 }
 
@@ -329,7 +331,7 @@ section {
 .line {
   margin-left: var(--gap-tiny);
   padding-left: calc(var(--gap-xlarge) - var(--gap-small));
-  border-left: solid rgba(0, 0, 0, 0.3) .15em;
+  border-left: solid var(--color-bg-secondary) var(--gap-micro);
 }
 
 .space {
@@ -363,7 +365,7 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  border-top: 10px solid #56817A;
+  border-top: 10px solid var(--color-bg-secondary);
   padding: 34px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }

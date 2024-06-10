@@ -246,12 +246,12 @@ section {
   background: rgba(0, 0, 0, 0.3);
 }
 
+/* Common */
 .row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: var(--gap-small);
-  margin-bottom: var(--gap-small);
 }
 
 .column {

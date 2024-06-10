@@ -157,6 +157,8 @@ p,
 li {
   font-size: 11px;
   text-align: justify;
+  margin-top: var(--gap-small);
+  margin-bottom: var(--gap-small);
 }
 
 blockquote {
@@ -268,6 +270,13 @@ section {
   align-items: flex-end;
 }
 
+.centre {
+  justify-content: center;
+}
+
+.spread {
+  gap: var(--gap-large);
+}
 /* Header Section */
 .profile-pic {
   margin-top: -5px;
@@ -279,17 +288,6 @@ section {
   width: 52px;
   border-radius: 50%;
   border: 2px solid #56817A;
-}
-
-/* Profiles Section */
-.profiles {
-  justify-content: center;
-  gap: var(--gap-large);
-}
-
-/* Summary Section */
-.summary {
-  margin: 5px 0 5px;
 }
 
 /* Skills Section */

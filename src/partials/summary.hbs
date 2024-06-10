@@ -1,10 +1,10 @@
 {{#resume.basics}}
-    {{#if summary}}
-        <section>
-            {{> title value="Summary"}}
-            {{#each (split summary) }}
-                <p class="summary">{{this}}</p>
-            {{/each}}
-        </section>
-    {{/if}}
+{{#if summary}}
+    <section>
+        {{> title value="Summary"}}
+        {{#each (split summary) }}
+            <p class="summary">{{this}}</p>
+        {{/each}}
+    </section>
+{{/if}}
 {{/resume.basics}}

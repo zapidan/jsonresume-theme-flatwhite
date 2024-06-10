@@ -1,15 +1,15 @@
-<div class="info-tag-container">
-    {{#if icon}}
-    <i class="fa {{icon}}"></i>
-    {{/if}}
+<div class="row align-center">
+    <h6 class="large">
+        {{#if icon}}
+        <i class="fa {{icon}}"></i>
+        {{/if}}
 
-    {{#if url}}
-        <h6 class="info-text">
+        {{#if url}}
             <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank">
                 {{removeProtocol text}}
             </a>
-        </h6>
-    {{else}}
-        <h6 class="info-text">{{{text}}}</h6>
-    {{/if}}
+        {{else}}
+            {{{text}}}
+        {{/if}}
+    </h6>
 </div>

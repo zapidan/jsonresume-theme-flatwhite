@@ -212,7 +212,8 @@ ul.two-column li {
 }
 
 i {
-  margin-right: .1em;
+  margin-right: var(--gap-small);
+  color: var(--color-primary);
 }
 
 @page {
@@ -291,6 +292,10 @@ section {
   justify-content: center;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .narrow {
   margin-top: var(--gap-small);
 }
@@ -301,6 +306,10 @@ section {
 
 .wrap {
   flex-wrap: wrap;
+}
+
+.large {
+  font-size: 12px;
 }
 
 /* Header Section */
@@ -323,9 +332,6 @@ section {
 }
 
 /* Work Section */
-.align-center {
-  align-items: center;
-}
 
 .line {
   margin-left: var(--gap-tiny);
@@ -357,57 +363,6 @@ section {
   border-top: 10px solid var(--color-bg-secondary);
   padding: 34px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-}
-
-.page:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Components */
-.info-tag-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.info-tag-container .fa {
-  font-size: 14px;
-  width: 12px;
-  margin-right: 5px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.info-tag-container .fa.fa-map-marker {
-  font-size: 16px;
-}
-
-.info-tag-container .fa.fa-mobile {
-  font-size: 18px;
-}
-
-.info-tag-container .fa.fa-envelope-o {
-  font-size: 12px;
-}
-
-.info-tag-container .fa.fa-desktop {
-  font-size: 11px;
-}
-
-.info-tag-container .fa.fa-external-link {
-  width: auto;
-  font-size: inherit;
-  vertical-align: text-top;
-}
-
-.info-tag-container .info-text {
-  font-size: 12px;
-  text-transform: none;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 /* Adjustments for Printing */

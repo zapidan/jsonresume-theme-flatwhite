@@ -316,10 +316,6 @@ section {
 }
 
 /* Work Section */
-.position {
-  margin-top: var(--gap-medium);
-}
-
 .last {
   margin-bottom: 1em;
 }

@@ -1,9 +1,11 @@
 {{#resume.basics}}
-<section class="profiles">
-    {{#if profiles}}
-        {{#each profiles}}
-            {{> social}}
-        {{/each}}
-    {{/if}}
+<section>
+    <div class="row profiles">
+        {{#if profiles}}
+            {{#each profiles}}
+                {{> social}}
+            {{/each}}
+        {{/if}}
+    </div>
 </section>
 {{/resume.basics}}

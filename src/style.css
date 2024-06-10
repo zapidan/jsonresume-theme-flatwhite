@@ -1,8 +1,13 @@
-/* Utils */
-/*----- Colors -----*/
-/*----- Fonts -----*/
-/*----- Dimensions and sizes -----*/
-/* Base */
+/* Variables */
+
+:root {
+  --main-bg-color: cornflowerblue;
+  --gap-small: .25em;
+  --gap-medium: .5em;
+  --gap-large: 1em;
+}
+
+
 @font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
@@ -245,8 +250,8 @@ section {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: .25em;
-  margin-bottom: .25em;
+  gap: var(--gap-small);
+  margin-bottom: var(--gap-small);
 }
 
 .column {
@@ -278,10 +283,8 @@ section {
 
 /* Profiles Section */
 .profiles {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 1em;
+  gap: var(--gap-large);
 }
 
 /* Summary Section */

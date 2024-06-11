@@ -1,7 +1,7 @@
 {{#resume.basics}}
 {{#if summary}}
     <section>
-        {{> title value="Summary"}}
+        {{> section-heading icon="user" value="About"}}
         {{#each (split summary) }}
             <p class="summary">{{this}}</p>
         {{/each}}

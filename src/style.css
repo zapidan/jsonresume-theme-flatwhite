@@ -226,8 +226,8 @@ section {
 }
 
 .keyline {
-  width: 45px;
-  margin: 8px 0 10px;
+  width: 100%;
+  margin: var(--gap-tiny) 0 var(--gap-medium);
   border-top: solid var(--color-bg-secondary) var(--gap-micro);
 }
 

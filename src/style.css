@@ -312,6 +312,11 @@ section {
   font-size: 12px;
 }
 
+/* Sections */
+.profiles + section {
+  margin-top: 0;
+}
+
 /* Header Section */
 .profile-pic {
   margin-top: -5px;
@@ -332,7 +337,6 @@ section {
 }
 
 /* Work Section */
-
 .line {
   margin-left: var(--gap-tiny);
   padding-left: calc(var(--gap-xlarge) - var(--gap-small));

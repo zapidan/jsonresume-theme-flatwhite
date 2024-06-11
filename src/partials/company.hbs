@@ -1,5 +1,8 @@
-<section>
-  <div class="row">
+<section class="company">
+  <div class="row spread">
+      {{#if image}}
+        <img class="logo" src={{image}} />
+      {{/if}}
       <div class="column fill">
           {{#if name}}
               <h3 class="bold">
@@ -14,7 +17,6 @@
           {{#if description}}
               <h6>{{description}}</h6>
           {{/if}}
-
           {{#if this.keywords.length}}
           <div class="row wrap">
               {{#each this.keywords}}

@@ -360,6 +360,10 @@ section {
   align-self: flex-end;
 }
 
+.logo {
+  max-width: 10%;
+}
+
 /* Layouts */
 .page {
   background: var(--color-bg-primary);

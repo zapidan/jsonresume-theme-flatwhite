@@ -7,17 +7,17 @@ Americano is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchi
 
 
 1. Download [JSON Resume CLI](https://jsonresume.org/)
-  ```
+  ```sh
   npm install -g resume-cli
   ```
 
 2. Download the theme from [npm](https://www.npmjs.com/)
-  ```
+  ```sh
   npm install -g jsonresume-theme-americano
   ```
 
 3. Use resume cli to build your resume
-  ```
+  ```sh
   resume export resume.html --theme americano
   ```
 
@@ -30,7 +30,7 @@ so I switched to a more direct and effective approach.
 
 I use Puppeteer-CLI to make a PDF from my HTML resume.
 
-```
+```sh
 npm install -g puppeteer-cli
 puppeteer --wait-until networkidle0 --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format A4 print resume.html resume.pdf
 ```

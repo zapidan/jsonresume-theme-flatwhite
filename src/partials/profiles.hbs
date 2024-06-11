@@ -1,11 +1,19 @@
 {{#resume.basics}}
-<section class="profiles no-print">
-    <div class="row centre spread">
-        {{#if profiles}}
+{{#if profiles}}
+    <section class="profiles no-print">
+        <div class="row centre spread">
             {{#each profiles}}
-                {{> social}}
+                {{#if network}}
+                    {{#if username}}
+                        {{#if (eq (lowercase network) "linkedin")}}
+                            {{> info-tag text=(concat '' this.username) icon="fa-linkedin-square" }}
+                        {{else}}
+                            {{> info-tag text=this.username icon=(concat "fa-" (lowercase network)) }}
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
             {{/each}}
-        {{/if}}
-    </div>
-</section>
+        </div>
+    </section>
+{{/if}}
 {{/resume.basics}}

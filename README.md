@@ -2,23 +2,21 @@
 
 Americano is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchiato Theme](https://github.com/biosan/jsonresume-theme-macchiato).
 
-
 ## Quick Start
 
-
-1. Download [JSON Resume CLI](https://jsonresume.org/)
+1. Create a new project.
   ```sh
-  npm install -g resume-cli
+  npm init
   ```
 
-2. Download the theme from [npm](https://www.npmjs.com/)
+2. Install [JSON Resume CLI](https://jsonresume.org/) and the theme.
   ```sh
-  npm install -g jsonresume-theme-americano
+  npm install --save-dev resume-cli jsonresume-theme-americano
   ```
 
-3. Use resume cli to build your resume
+3. Use [JSON Resume CLI](https://jsonresume.org/) to render your resume using the theme
   ```sh
-  resume export resume.html --theme americano
+  npx resume export resume.html --theme americano
   ```
 
 ### PDF output

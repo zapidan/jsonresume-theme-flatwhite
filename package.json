@@ -4,6 +4,9 @@
   "description": "Simple theme for JSON Resume based on the macchiato theme.",
   "author": "NuclearRedeye",
   "license": "MIT",
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/NuclearRedeye/jsonresume-theme-americano"

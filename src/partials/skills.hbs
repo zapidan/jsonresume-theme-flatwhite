@@ -1,8 +1,8 @@
 {{#if resume.skills.length}}
     <section class="skills">
         {{> section-heading icon="wrench" value="Skills"}}
-        {{#each resume.skills}}
-            <div class="row top space">
+        <div class="grid">
+            {{#each resume.skills}}
                 <div class="column end skills">
                     {{#if name}}
                         <h4 class="bold capitalize">{{name}}</h4>
@@ -18,7 +18,7 @@
                         {{/each}}
                     </div>
                 {{/if}}
-            </div>
-        {{/each}}
+            {{/each}}
+        </div>
     </section>
 {{/if}}

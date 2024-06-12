@@ -164,8 +164,7 @@ p,
 li {
   font-size: 11px;
   text-align: justify;
-  margin-top: var(--gap-small);
-  margin-bottom: var(--gap-small);
+  margin: 0;
 }
 
 blockquote {

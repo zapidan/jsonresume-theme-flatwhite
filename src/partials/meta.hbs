@@ -2,6 +2,23 @@
 <section class="meta">
     {{> section-heading icon="asterisk" value="Meta"}}
     <div class="grid">
+        {{#if resume.certificates.length}}
+            <div class="column end">
+                <h4 class="bold capitalize">Certifications</h4>
+            </div>
+            <div class="row wrap minimal">
+                {{#each resume.certificates}}
+                    <h6 class="chip">
+                        {{#if url}}
+                            <a href="{{url}}" target="_blank">{{name}}</a>
+                        {{else}}
+                            {{name}}
+                        {{/if}}
+                    </h6>
+                {{/each}}
+            </div>
+        {{/if}}
+
         {{#if resume.languages.length}}
             <div class="column end">
                 <h4 class="bold capitalize">Languages</h4>

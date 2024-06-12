@@ -278,6 +278,7 @@ section {
   grid-template-rows: auto;
   column-gap: var(--gap-medium);
   row-gap: var(--gap-medium);
+  justify-content: start;
 }
 
 .top {

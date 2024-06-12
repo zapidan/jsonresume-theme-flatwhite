@@ -1,0 +1,33 @@
+{{#if resume.interests.length}}
+<section class="meta">
+    {{> section-heading icon="asterisk" value="Meta"}}
+    <div class="grid">
+        {{#if resume.languages.length}}
+            <div class="column end">
+                <h4 class="bold capitalize">Languages</h4>
+            </div>
+            <div class="row wrap minimal">
+                {{#each resume.languages}}
+                    <h6 class="chip">
+                        {{language}}
+                        {{#if fluency}}
+                            ({{fluency}})
+                        {{/if}}
+                    </h6>
+                {{/each}}
+            </div>
+        {{/if}}
+
+        {{#if resume.interests.length}}
+            <div class="column end">
+                <h4 class="bold capitalize">Interests</h4>
+            </div>
+            <div class="row wrap minimal">
+                {{#each resume.interests}}
+                    <h6 class="chip">{{name}}</h6>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
+</section>
+{{/if}}

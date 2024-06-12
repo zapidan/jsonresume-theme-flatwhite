@@ -1,27 +1,24 @@
-<section>
-    {{> section-heading icon="thumbs-up" value="References"}}
-    {{#if resume.references.length}}
-        {{#each resume.references}}
-            <section class="reference">
-                <div class="column">
-                    <div class="row">
-                        {{#if reference}}
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                        <blockquote class="main">
-                            {{reference}}
-                        </blockquote>
-                        {{/if}}
-                    </div>
+<section class="references">
+    {{> section-heading icon="quote-left" value="References"}}
 
-                    {{#if name}}
-                        <h5 class="right">
-                            <i class="fa fa-user-o" aria-hidden="true"></i>
-                            {{name}}
-                        </h5>
-                    {{/if}}
-                </div>
-            </section>
+    {{#if resume.references.length}}
+        <div class="grid">
+        {{#each resume.references}}
+            <div class="column">
+                <div class="line"></div>
+            </div>
+            <div class="column fill">
+                {{#if reference}}
+                    <p>
+                        {{reference}}
+                    <p> 
+                {{/if}}
+                {{#if name}}
+                    <h6>{{name}}</h6>
+                {{/if}}
+            </div>
         {{/each}}
+        </div>
     {{else}}
         <p>References are available on request</p>
     {{/if}}

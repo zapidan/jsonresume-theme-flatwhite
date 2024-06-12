@@ -199,17 +199,6 @@ ul.minimal li {
   padding-left: 0;
 }
 
-ul.two-column {
-  -webkit-column-count: 2;
-  -webkit-column-gap: 28px;
-  column-count: 2;
-  column-gap: 28px;
-}
-
-ul.two-column li {
-  padding-left: 0;
-}
-
 i {
   margin-right: var(--gap-small);
   color: var(--color-primary);

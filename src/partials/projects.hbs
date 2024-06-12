@@ -1,35 +1,75 @@
 {{#if resume.projects.length}}
-<div class="container project-container">
-    {{> section-heading value="Open Source Projects"}}
+<section class="projects">
+    {{> section-heading icon="code" value="Projects"}}
 
     {{#each resume.projects}}
-        <section class="item">
-            {{> section-header name=this.name website=this.url showWebsite=true}}
+        <section class="project">
+            <div class="grid">
+                <div class="line"></div>
+                <div class="column">
+                    <div class="row wide inherit-height">
+                        {{#if image}}
+                            <img class="logo" src={{image}} />
+                        {{/if}}
 
-            {{#if role}}
-                <h5>{{role}}</h5>
-            {{/if}}
+                        <div class="column fill between inherit-height">
+                            {{#if name}}
+                                <h3 class="bold">
+                                    {{#if url}}
+                                        <a href="{{url}}" target="_blank">{{name}}</a>
+                                    {{else}}
+                                        {{name}}
+                                    {{/if}}
+                                </h3>
+                            {{/if}}
 
-            {{#if keywords.length}}
-            <div class="flex-container">
-                {{#each keywords}}
-                    <h6 class="skill">{{.}}</h6>
-                {{/each}}
+                            {{#if this.keywords.length}}
+                                <div class="row wrap">
+                                    {{#each this.keywords}}
+                                        <h6 class="chip">{{.}}</h6>
+                                    {{/each}}
+                                </div>
+                            {{/if}}
+                        </div>
+
+                        <div class="column end fit">
+                            {{#if startDate}}
+                                <h6>
+                                    <i class="fa fa-calendar"></i>
+                                    <span>{{formatDate startDate}}</span>
+                                    {{#if endDate}}
+                                    <span> - {{formatDate endDate}}</span>
+                                    {{else}}
+                                    <span> - Present</span>
+                                    {{/if}}
+                                </h6>
+                            {{/if}}
+
+                            {{#if duration}}
+                                <h6>
+                                    <i class="fa fa-clock-o"></i>
+                                    <span>{{duration}}</span>
+                                </h6>
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    {{#if description}}
+                        {{#each (split description) }}
+                        <p>{{this}}</p>
+                        {{/each}}
+                    {{/if}}
+
+                    {{#if highlights.length}}
+                    <ul>
+                        {{#each highlights}}
+                        <li>{{.}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </div>
             </div>
-            {{/if}}
-
-            {{#if summary}}
-            <p class="summary">{{summary}}</p>
-            {{/if}}
-
-            {{#if highlights.length}}
-            <ul>
-                {{#each highlights}}
-                <li>{{.}}</li>
-                {{/each}}
-            </ul>
-            {{/if}}
         </section>
     {{/each}}
-</div>
+</section>
 {{/if}}

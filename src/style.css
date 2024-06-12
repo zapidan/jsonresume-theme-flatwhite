@@ -328,12 +328,18 @@ section {
   min-height: inherit;
 }
 
+/* FIX: rows within columns don't span the full width */
+.column .row {
+  width: 100%;
+}
+
 /* Section Overrides */
 .profiles + section {
   margin-top: 0;
 }
 
-.work .company:first-of-type {
+/* FIX: First section within a section needs no margin */
+section > section:first-of-type {
   margin-top: 0;
 }
 

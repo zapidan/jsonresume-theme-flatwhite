@@ -1,67 +1,67 @@
 {{#if resume.education.length}}
-<section>
+<section class="education">
     {{> section-heading icon="graduation-cap" value="Education"}}
-    
+
     {{#each resume.education}}
-        <div class="row">
-            <div class="column fill">
-                {{#if institution}}
-                    <h3 class="bold">
-                        {{#if this.url}}
-                            <a href="{{url}}" target="_blank">{{institution}}</a>
-                        {{else}}
-                            {{institution}}
-                        {{/if}}
-                    </h3>
-                {{/if}}
-
-                <h4>
-                    {{#if studyType}}{{studyType}}{{/if}}
-                    {{#if area}} {{area}}{{/if}}
-                    {{#if score}}, {{score}}{{/if}}
-                </h4>
-            </div>
-
-            <div class="column end">
-                {{#if startDate}}
-                    <h6>
-                        <i class="fa fa-calendar"></i>
-                        <span class="startDate">{{formatDate startDate}}</span>
-                        {{#if endDate}}
-                        <span class="endDate"> - {{formatDate endDate}}</span>
-                        {{else}}
-                        <span class="endDate"> - Present</span>
-                        {{/if}}
-                    </h6>
-                {{/if}}
-
-                {{#if duration}}
-                    <h6>
-                        <i class="fa fa-clock-o"></i>
-                        <span>{{duration}}</span>
-                    </h6>
-                {{/if}}
-
-                {{#if location}}
-                    <h6>
-                        <i class="fa fa-map-marker"></i>
-                        <span>{{location}}</span>
-                    </h6>
-                {{/if}}
-            </div>
-        </div>
-        
-        {{#if courses.length}}
+        <section class="institution">
             <div class="column">
-                <ul>
-                    {{#each courses}}
-                    <li>
-                        <h6>{{.}}</h6>
-                    </li>
-                    {{/each}}
-                </ul>
+                <div class="row stretch">
+                    <div class="column fill">
+                        {{#if institution}}
+                            <h3 class="bold">
+                                {{#if this.url}}
+                                    <a href="{{url}}" target="_blank">{{institution}}</a>
+                                {{else}}
+                                    {{institution}}
+                                {{/if}}
+                            </h3>
+                        {{/if}}
+
+                        <h4>
+                            {{#if studyType}}{{studyType}}{{/if}}
+                            {{#if area}} {{area}}{{/if}}
+                            {{#if score}} ({{score}}){{/if}}
+                        </h4>
+                    </div>
+
+                    <div class="column end">
+                        {{#if startDate}}
+                            <h6>
+                                <i class="fa fa-calendar"></i>
+                                <span class="startDate">{{formatDate startDate}}</span>
+                                {{#if endDate}}
+                                <span class="endDate"> - {{formatDate endDate}}</span>
+                                {{else}}
+                                <span class="endDate"> - Present</span>
+                                {{/if}}
+                            </h6>
+                        {{/if}}
+
+                        {{#if duration}}
+                            <h6>
+                                <i class="fa fa-clock-o"></i>
+                                <span>{{duration}}</span>
+                            </h6>
+                        {{/if}}
+
+                        {{#if location}}
+                            <h6>
+                                <i class="fa fa-map-marker"></i>
+                                <span>{{location}}</span>
+                            </h6>
+                        {{/if}}
+                    </div>
+                </div>
+                
+                {{#if courses.length}}
+                    <ul>
+                        {{#each courses}}
+                            <li>{{.}}</li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
             </div>
-        {{/if}}
+        </section>
     {{/each}}
 </section>
 {{/if}}

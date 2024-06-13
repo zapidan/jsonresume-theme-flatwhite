@@ -22,39 +22,41 @@ function getDurationString(startDateString, endDateString) {
   return `${delta.years()} yrs ${delta.months()} mos`;
 }
 
-// Groups Positions by Company for presentation purposes
-function groupPositionsByCompany(work) {
-  let companies = [];
+// Groups by the specified key for presentation purposes
+function groupByPosition(data, key) {
+  let grouped = [];
 
-  for (const position of work) {
+  for (const item of data) {
 
     // Is this a company that we've seen before?
-    if (!companies[position.name]) {
-      companies[position.name] = {...position, positions: []};
+    if (!grouped[item[key]]) {
+      grouped[item[key]] = {...item, positions: []};
     }
     
     // Calculate the duration in the role
-    const durationInRole = getDurationString(position.startDate, position?.endDate);
+    const durationInRole = getDurationString(item.startDate, item?.endDate);
 
     // Associate the role with the specified company
-    companies[position.name].positions.push({...position, duration: durationInRole});
+    grouped[item[key]].positions.push({...item, duration: durationInRole});
 
     // Update the cumulative start and end dates overall for the specific company, and calculate the overall duration
-    companies[position.name].startDate = moment.min(moment(position.startDate), moment(companies[position.name].startDate)).format('YYYY-MM');
-    companies[position.name].endDate = moment.max(moment(position.endDate), moment(companies[position.name].endDate)).format('YYYY-MM');
-    companies[position.name].duration = getDurationString(companies[position.name].startDate, companies[position.name]?.endDate);
+    grouped[item[key]].startDate = moment.min(moment(item.startDate), moment(grouped[item[key]].startDate)).format('YYYY-MM');
+    grouped[item[key]].endDate = moment.max(moment(item.endDate), moment(grouped[item[key]].endDate)).format('YYYY-MM');
+    grouped[item[key]].duration = getDurationString(grouped[item[key]].startDate, grouped[item[key]]?.endDate);
   }
 
   let retVal = [];
-  for (const key in companies) {
-    retVal.push(companies[key]);
+  for (const item in grouped) {
+    retVal.push(grouped[item]);
   }
   
   return retVal;
 }
 
 function render(resume) {
-  resume.work = groupPositionsByCompany(resume.work);
+
+  resume.work = groupByPosition(resume.work, "name");
+  resume.volunteer = groupByPosition(resume.volunteer, "organization");
 
   const dir = `${__dirname}/src`;
   const css = fs.readFileSync(`${dir}/style.css`, 'utf-8');

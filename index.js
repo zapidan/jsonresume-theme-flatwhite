@@ -41,7 +41,9 @@ function groupByPosition(data, key) {
 
     // Update the cumulative start and end dates overall for the specific company, and calculate the overall duration
     grouped[item[key]].startDate = moment.min(moment(item.startDate), moment(grouped[item[key]].startDate)).format('YYYY-MM');
-    grouped[item[key]].endDate = moment.max(moment(item.endDate), moment(grouped[item[key]].endDate)).format('YYYY-MM');
+    if (item.endDate) {
+      grouped[item[key]].endDate = moment.max(moment(item.endDate), moment(grouped[item[key]].endDate)).format('YYYY-MM');
+    }
     grouped[item[key]].duration = getDurationString(grouped[item[key]].startDate, grouped[item[key]]?.endDate);
   }
 

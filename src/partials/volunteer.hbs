@@ -1,26 +1,12 @@
 {{#if resume.volunteer.length}}
-<div class="container volunteer-container">
-    {{> section-heading value="Volunteer"}}
-
+<section class="volunteer">
+    {{> section-heading icon="gift" value="Volunteer Experience"}}
     {{#each resume.volunteer}}
-    <section class="item">
-        {{> section-header name=this.organization showWebsite=true}}
-        {{#if position}}
-        <h5>{{position}}</h5>
-        {{/if}}
-
-        {{#if summary}}
-        <p class="summary">{{summary}}</p>
-        {{/if}}
-
-        {{#if highlights.length}}
-        <ul>
-            {{#each highlights}}
-            <li>{{.}}</li>
-            {{/each}}
-        </ul>
-        {{/if}}
-    </section>
+        {{> organization }}
+        {{#each this.positions}}
+            {{> position}}
+        {{/each}}
     {{/each}}
-</div>
+</section>
 {{/if}}
+

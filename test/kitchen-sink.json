@@ -1,0 +1,288 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "José Bloggs",
+    "label": "Fullstack Software Engineer",
+    "image": "",
+    "email": "jose@example.com",
+    "phone": "+44 (0)7911 123456",
+    "url": "https://example.com",
+    "summary": "Fullstack Software Engineer with 6 years of experience in designing, developing, and deploying scalable web applications. Proficient in both frontend and backend technologies, including React, Angular, Node.js, and Express. Skilled in working with databases such as MongoDB and MySQL, and experienced in cloud platforms like AWS. Adept at working in agile environments, with a strong focus on delivering robust, high-quality solutions that meet user needs. Passionate about continuous learning, collaboration, and leveraging data-driven insights to drive innovation.",
+    "location": {
+      "city": "London",
+      "countryCode": "UK"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "GitHub",
+        "url": "https://github.com/octocat"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "LinkedIn",
+        "url": "https://www.linkedin.com"
+      },
+      {
+        "network": "Facebook",
+        "username": "Facebook",
+        "url": "https://www.facebook.com"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "QuantumByte Solutions",
+      "location": "London, UK",
+      "description": "forward-thinking tech company dedicated to revolutionizing business operations through innovative AI-driven software and custom enterprise solutions",
+      "position": "Senior Software Engineer",
+      "url": "https://duckduckgo.com",
+      "image": "logo.amino.jpg",
+      "startDate": "2023-09",
+      "keywords": ["TypeScript", "JavaScript", "React", "Node.js", "Express.js", "MySQL"],
+      "summary": "Promoted to Senior Software Engineer, I was responsible for leading medium-large technical projects for the company's AI data analysis products",
+      "highlights": [
+        "Something milestone and/or statement about a specific project",
+        "Another milestone and/or statement about a specific project",
+        "Further milestone and/or statement about a specific project",
+        "Closing milestone and/or statement about a specific project"
+      ]
+    },
+    {
+      "name": "QuantumByte Solutions",
+      "location": "London, UK",
+      "description": "forward-thinking tech company dedicated to revolutionizing business operations through innovative AI-driven software and custom enterprise solutions",
+      "position": "Software Engineer",
+      "url": "https://duckduckgo.com",
+      "image": "logo.amino.jpg",
+      "startDate": "2020-06",
+      "endDate": "2023-09",
+      "keywords": ["TypeScript", "JavaScript", "React", "Node.js", "Express.js", "MySQL"],
+      "summary": "Joined as a Software engineer to work on the companies AI data analysis product",
+      "highlights": [
+        "Something milestone and/or statement about a specific project",
+        "Another milestone and/or statement about a specific project",
+        "Further milestone and/or statement about a specific project",
+        "Closing milestone and/or statement about a specific project"
+      ]
+    },
+    {
+      "name": "Tech Innovations Inc",
+      "location": "London, UK",
+      "description": "Leading tech consultancy specializing in delivering cutting-edge digital solutions and strategic IT services to help businesses thrive in the digital age",
+      "position": "Graduate Software Engineer",
+      "url": "https://duckduckgo.com",
+      "image": "logo.qinetiq.jpg",
+      "startDate": "2018-10",
+      "endDate": "2020-06",
+      "keywords": ["TypeScript", "JavaScript", "React", "Node.js", "Express.js"],
+      "summary": "Joined as a graduate software engineer building new features for the company's browser based CAD tools.",
+      "highlights": [
+        "Something milestone and/or statement about a specific project",
+        "Another milestone and/or statement about a specific project"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "SmartHome Automation",
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Developed a comprehensive home automation system leveraging IoT devices and machine learning to enhance user convenience and energy efficiency.",
+      "highlights": [
+        "Won the Best IoT Innovation Award at TechFest 2020",
+        "Achieved a 30% reduction in home energy consumption for users",
+        "Successfully integrated with major voice assistants like Alexa and Google Home"
+      ],
+      "url": "https://smarthomeautomation.com/",
+      "keywords": ["C#", "SOAP", "OpenAPI"]
+    },
+    {
+      "name": "EcoFleet Management System",
+      "startDate": "2020-05-01",
+      "endDate": "2022-06-01",
+      "description": "Led the development of an advanced fleet management system that optimizes routes and monitors vehicle health to reduce fuel consumption and maintenance costs.",
+      "highlights": [
+        "Received the Green Technology Award at the Sustainability Expo 2021",
+        "Reduced fleet fuel consumption by 25% on average",
+        "Implemented real-time analytics for predictive maintenance"
+      ],
+      "url": "https://ecofleetmanagement.com/"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Community Outreach Initiative",
+      "position": "Volunteer Leader",
+      "url": "https://communityoutreachinitiative.com/",
+      "startDate": "2013-01-01",
+      "summary": "Coordinated volunteer activities for a local community outreach program, focusing on organizing events and managing volunteer schedules.",
+      "highlights": [
+        "Received 'Volunteer of the Month' award for exceptional dedication and leadership."
+      ]
+    },
+    {
+      "organization": "Community Outreach Initiative",
+      "position": "Volunteer Coordinator",
+      "url": "https://communityoutreachinitiative.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Coordinated volunteer activities for a local community outreach program, focusing on organizing events and managing volunteer schedules.",
+      "highlights": [
+        "Received 'Volunteer of the Month' award for exceptional dedication and leadership."
+      ]
+    },
+    {
+      "organization": "Animal Rescue Shelter",
+      "position": "Animal Care Volunteer",
+      "url": "https://animalrescueshelter.com/",
+      "startDate": "2014-03-15",
+      "endDate": "2015-06-30",
+      "summary": "Provided daily care and support for rescued animals, including feeding, grooming, and assisting with adoption events.",
+      "highlights": [
+        "Organized successful adoption drives resulting in a 30% increase in adoptions."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University College London",
+      "location": "London, UK",
+      "url": "https://www.ucl.ac.uk/",
+      "area": "Computer Science",
+      "studyType": "BSc Hons",
+      "startDate": "2013-09",
+      "endDate": "2018-06",
+      "score": "2:1",
+      "courses": [
+        "Some Module - 10",
+        "Another Module - 9"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Advanced Project Management",
+      "date": "2021-11-07",
+      "issuer": "Global Certification Institute",
+      "url": "https://globalcertificationinstitute.com/certificates/advanced-project-management"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Excellence in Innovation",
+      "date": "2014-11-01",
+      "awarder": "Tech Innovators Inc.",
+      "summary": "Recognized for developing groundbreaking software solutions that significantly improved user experience."
+    },
+    {
+      "title": "Outstanding Leadership Award",
+      "date": "2017-05-15",
+      "awarder": "Global Tech Leaders",
+      "summary": "Honored for exemplary leadership and successful management of cross-functional teams in high-stakes projects."
+    },
+    {
+      "title": "Top Contributor Award",
+      "date": "2019-09-10",
+      "awarder": "Open Source Community",
+      "summary": "Awarded for extensive contributions to open source projects, enhancing functionality and usability for the community."
+    },
+    {
+      "title": "Employee of the Year",
+      "date": "2020-12-01",
+      "awarder": "Innovative Solutions Corp.",
+      "summary": "Recognized as the most outstanding employee for exceptional performance, dedication, and contribution to the company's success."
+    },
+    {
+      "title": "Best Research Paper",
+      "date": "2021-03-20",
+      "awarder": "International Data Science Conference",
+      "summary": "Awarded for presenting the best research paper on data-driven decision-making methodologies."
+    }
+  ],
+  "publications": [
+      {
+        "name": "Innovative Web Technologies",
+        "publisher": "Tech Publishing Co.",
+        "releaseDate": "2021-10-01",
+        "url": "https://techpublishingco.com/innovative-web-technologies",
+        "summary": "An in-depth exploration of emerging web technologies and their impact on modern web development."
+      },
+      {
+        "name": "Data-Driven Decision Making",
+        "publisher": "Analytics World",
+        "releaseDate": "2017-11-20",
+        "url": "https://analyticsworld.com/data-driven-decision-making",
+        "summary": "An essential resource for understanding how to leverage data analytics to inform business decisions and strategies."
+      },
+      {
+        "name": "Cybersecurity Fundamentals",
+        "publisher": "Security Matters Inc.",
+        "releaseDate": "2021-02-25",
+        "url": "https://securitymattersinc.com/cybersecurity-fundamentals",
+        "summary": "An introduction to the fundamental concepts of cybersecurity, including risk management, threat detection, and incident response."
+      }
+  ],
+  "skills": [
+    {
+      "name": "Fullstack",
+      "level": "Senior",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "React",
+        "Express.js",
+        "Mongo"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Adept",
+      "keywords": [
+        "Docker",
+        "AWS",
+        "GitHub",
+        "Linux",
+        "CI/CD",
+        "DataDog"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Video Games"
+    },
+    {
+      "name": "Gym"
+    },
+    {
+      "name": "Cooking"
+    }
+  ],
+  "references": [
+    {
+      "name": "Joe Bloggs",
+      "reference": "I have worked with José for the past three years at Tech Innovations Inc. He consistently demonstrates exceptional technical skills, especially in web development and embedded systems. José is a proactive and reliable team member who excels in problem-solving and consistently delivers high-quality results. His leadership and collaborative approach have significantly contributed to our team's success. I highly recommend him for any position that requires a dedicated and skilled software engineer."
+    },
+    {
+      "name": "Khan Noonien Singh",
+      "reference": "I had the pleasure of working with José for four years at QuantumByte Solutions. He consistently exhibited outstanding technical expertise, particularly in cloud computing and software architecture. José is an innovative and dependable team player who excels at troubleshooting and delivering robust solutions. Her leadership and ability to foster collaboration were invaluable to our team's achievements. I highly recommend him for any role requiring a talented and committed software engineer."
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}

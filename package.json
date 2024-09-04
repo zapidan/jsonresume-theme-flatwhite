@@ -19,5 +19,8 @@
     "handlebars": "^4.7.6",
     "handlebars-wax": "^6.1.0",
     "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.1.2"
   }
 }

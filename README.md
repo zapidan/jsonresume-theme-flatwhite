@@ -2,6 +2,8 @@
 
 Americano is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchiato Theme](https://github.com/biosan/jsonresume-theme-macchiato).
 
+![](https://github.com/NuclearRedeye/jsonresume-theme-americano/blob/master/preview.gif)
+
 ## Prerequisites
 
 * You have a Linux or OSX machine. Windows should be supported via WSL 2 but has not been tested.

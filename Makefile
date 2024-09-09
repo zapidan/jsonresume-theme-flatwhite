@@ -23,6 +23,12 @@ clean:
 distclean: clean
 	@rm -rf node_modules
 
+# Target to install Node.js dependencies.
+node_modules: package.json package.json
+	@echo "Installing dependencies..."
+	@npm i
+	@-touch node_modules
+
 # Target to create the output directories.
 public: $(ASSETS)
 	@echo "Creating $@..."
@@ -41,4 +47,4 @@ serve: ${JSON}
 	@npx resume serve --resume $< --port $(PORT) --theme ${THEME}
 
 # Validates and Serves the CV
-test: validate public serve
+test: node_modules validate public serve

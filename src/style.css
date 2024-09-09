@@ -408,10 +408,12 @@ section > section:first-of-type {
   }
 
   .page {
-    width: 90%; /* FIXME: Not sure why this overflows the page if set to 100% */
+    width: 100%;
     height: 100%;
     margin: 0;
+    padding: 0;
     box-shadow: none;
+    border: none;
   }
 
   section :not(.work) {

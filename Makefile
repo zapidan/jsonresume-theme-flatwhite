@@ -2,6 +2,7 @@ PROJECT := $(notdir $(CURDIR))
 PORT ?= 8080
 
 JSON := ./test/kitchen-sink.json
+ASSETS := $(shell find ./test/ -type f -name "*.jpg")
 THEME := .
 
 # Targets that don't result in output of the same name.
@@ -23,9 +24,11 @@ distclean: clean
 	@rm -rf node_modules
 
 # Target to create the output directories.
-public:
+public: $(ASSETS)
 	@echo "Creating $@..."
 	@mkdir -p $(CURDIR)/$@
+	@echo "Copying assets..."
+	@cp test/*.jpg $@
 
 # Target to create the validate the JSON against the schema.
 validate: ${JSON}
@@ -38,4 +41,4 @@ serve: ${JSON}
 	@npx resume serve --resume $< --port $(PORT) --theme ${THEME}
 
 # Validates and Serves the CV
-test: validate serve
+test: validate public serve

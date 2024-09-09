@@ -2,7 +2,22 @@
 
 Americano is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchiato Theme](https://github.com/biosan/jsonresume-theme-macchiato).
 
+## Prerequisites
+
+* You have a Linux or OSX machine. Windows should be supported via WSL 2 but has not been tested.
+* You have installed a recent version of [GNU Make](https://www.gnu.org/software/make/).
+
 ## Quick Start
+
+You can get up and running quickly with...
+
+```sh
+make
+```
+
+Then open http://localhost:8080 in your browser.
+
+## Using in your own Project
 
 1. Create a new project.
   ```sh
@@ -19,24 +34,21 @@ Americano is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchi
   npx resume export resume.html --theme americano
   ```
 
-### PDF output
+## Customizations
 
-You probably want a PDF version of your resume...
+This theme supports some additional properties on certain objects, see below for specifics and take a look at the [Kitchen Sink](./test/kitchen-sink.json) to see sample JSON. 
 
-JSONResume CLI should be able to make a PDF out of your JSON but I always struggled to get it to work,
-so I switched to a more direct and effective approach.
+#### Company Logos
 
-I use Puppeteer-CLI to make a PDF from my HTML resume.
+A `work` entry can optionally have company logo via the `image` property which will be displayed in the header section for each company.
 
-```sh
-npm install -g puppeteer-cli
-puppeteer --wait-until networkidle0 --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format A4 print resume.html resume.pdf
+```json
+"work": [
+  {
+    "image": "company-logo.jpg",
+  }
+]
 ```
-
-Obviously you could write a very simple Node script to use the real Puppeteer and the `render` function to make a PDF without first exporting the HTML version.
-
-Also checkout [HackMyResume](https://github.com/hacksalot/HackMyResume), a powerful tool to build and analyze your JSON Resume.
-
 
 ## License
 

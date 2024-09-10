@@ -54,6 +54,8 @@ Support for company specific keywords via a `keywords` array. If present, each e
 ]
 ```
 
+Note: For multiple positions at the same company, the `keywords` for the most recent position are used.
+
 #### Company Logos
 
 A `work` entry can optionally have company logo via the `image` property which will be displayed in the header section for each company.

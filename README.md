@@ -38,7 +38,21 @@ Then open http://localhost:8080 in your browser.
 
 ## Customizations
 
-This theme supports some additional properties on certain objects, see below for specifics and take a look at the [Kitchen Sink](./test/kitchen-sink.json) to see sample JSON. 
+This theme supports some additional properties on certain objects, see below for specifics and take a look at the [Kitchen Sink](./test/kitchen-sink.json) to see sample JSON.
+
+#### Company Specific Keywords
+
+Support for company specific keywords via a `keywords` array. If present, each entry in the array will be rendered as a chip alongside the specific company.
+
+```json
+"work": [{
+    "keywords": [
+      "TypeScript",
+      "Express.js"
+    ]
+  }
+]
+```
 
 #### Company Logos
 

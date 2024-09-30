@@ -6,7 +6,7 @@
     "image": "avatar.jpg",
     "email": "jose@example.com",
     "phone": "+44 (0)7911 123456",
-    "url": "https://example.com",
+    "url": "https://blog.example.com",
     "summary": "Fullstack Software Engineer with 6 years of experience in designing, developing, and deploying scalable web applications. Proficient in both frontend and backend technologies, including React, Angular, Node.js, and Express. Skilled in working with databases such as MongoDB and MySQL, and experienced in cloud platforms like AWS. Adept at working in agile environments, with a strong focus on delivering robust, high-quality solutions that meet user needs. Passionate about continuous learning, collaboration, and leveraging data-driven insights to drive innovation.",
     "location": {
       "city": "London",

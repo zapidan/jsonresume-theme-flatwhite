@@ -4,8 +4,8 @@
         <i class="fa {{icon}}"></i>
         {{/if}}
 
-        {{#if url}}
-            <a href="{{#if isEmail}}mailto:{{/if}}{{url}}" target="_blank">
+        {{#if href}}
+            <a href="{{#if isEmail}}mailto:{{/if}}{{href}}" target="_blank">
                 {{removeProtocol text}}
             </a>
         {{else}}

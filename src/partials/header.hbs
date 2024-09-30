@@ -11,15 +11,15 @@
 
     <div class="column end">
         {{#if email}}
-            {{> info-tag text=email icon="fa-envelope-o" isEmail=true url=email}}
+            {{> info-tag text=email icon="fa-envelope-o" isEmail=true href=email}}
         {{/if}}
 
         {{#if phone}}
-            {{> info-tag text=phone icon="fa-phone"}}
+            {{> info-tag text=phone icon="fa-phone" }}
         {{/if}}
 
         {{#if website}}
-            {{> info-tag text=website icon="fa-globe" url=website}}
+            {{> info-tag text=website icon="fa-globe" href=website}}
         {{/if}}
 
         {{#if location}}

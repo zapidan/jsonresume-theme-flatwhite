@@ -1,6 +1,6 @@
-# Americano Theme
+# Flat White Theme
 
-Americano is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchiato Theme](https://github.com/biosan/jsonresume-theme-macchiato).
+Flatwhite is a [JSON Resume](https://jsonresume.org/) theme based on the [Macchiato Theme](https://github.com/biosan/jsonresume-theme-macchiato).
 
 ![](https://github.com/NuclearRedeye/jsonresume-theme-americano/blob/master/preview.gif)
 
@@ -28,12 +28,12 @@ Then open http://localhost:8080 in your browser.
 
 2. Install [JSON Resume CLI](https://jsonresume.org/) and the theme.
   ```sh
-  npm install --save-dev resume-cli jsonresume-theme-americano
+  npm install --save-dev resume-cli jsonresume-theme-flatwhite
   ```
 
 3. Use [JSON Resume CLI](https://jsonresume.org/) to render your resume using the theme
   ```sh
-  npx resume export resume.html --theme americano
+  npx resume export resume.html --theme flatwhite
   ```
 
 ## Customizations

@@ -1,7 +1,7 @@
+{{#if resume.references.length}}
 <section class="references">
     {{> section-heading icon="quote-left" value="References"}}
 
-    {{#if resume.references.length}}
         <div class="grid">
         {{#each resume.references}}
             <div class="column">
@@ -19,7 +19,5 @@
             </div>
         {{/each}}
         </div>
-    {{else}}
-        <p>References are available on request</p>
-    {{/if}}
 </section>
+{{/if}}

@@ -388,6 +388,13 @@ section > section:first-of-type {
   align-self: flex-end;
 }
 
+/* Meta Section */
+.grid-meta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 /* Layouts */
 .page {
   background: var(--color-bg-primary);

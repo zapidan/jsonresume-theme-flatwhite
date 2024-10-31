@@ -1,26 +1,26 @@
-name: Publish to NPM
+# name: Publish to NPM
 
-on:
-  push:
-    branches:
-      - master
-    tags:        
-      - v*
-  pull_request:
+# on:
+#   push:
+#     branches:
+#       - master
+#     tags:        
+#       - v*
+#   pull_request:
 
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          registry-url: 'https://registry.npmjs.org'
-      # Only publish for a tagged release that starts with a lowercase v
-      - name: Publish to npmjs.com
-        if: contains(github.ref, 'refs/tags/v')
-        run: |
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+# jobs:
+#   publish:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version-file: '.nvmrc'
+#           registry-url: 'https://registry.npmjs.org'
+#       # Only publish for a tagged release that starts with a lowercase v
+#       - name: Publish to npmjs.com
+#         if: contains(github.ref, 'refs/tags/v')
+#         run: |
+#           npm publish
+#         env:
+#           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

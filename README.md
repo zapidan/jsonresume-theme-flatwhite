@@ -21,54 +21,21 @@ Then open http://localhost:8080 in your browser.
 
 ## Using in your own Project
 
-1. Create a new project.
-  ```sh
-  npm init
-  ```
+This is intented for local development and it hasn't been published to npm.
 
-2. Install [JSON Resume CLI](https://jsonresume.org/) and the theme.
-  ```sh
-  npm install --save-dev resume-cli jsonresume-theme-flatwhite
-  ```
+First, update `kitchen-sink.json` with your resume
 
-3. Use [JSON Resume CLI](https://jsonresume.org/) to render your resume using the theme
-  ```sh
-  npx resume export resume.html --theme flatwhite
-  ```
+```sh
+make
+```
+
+```sh
+cp public/index.html {{your_project}}
+```
+  
 
 ## Customizations
 
-This theme supports some additional properties on certain objects, see below for specifics and take a look at the [Kitchen Sink](./test/kitchen-sink.json) to see sample JSON.
+The order of the different sections has changes with respect to americano theme, and the references section has been muted if there are none. Additionally, the certificates section has been removed from meta and certificates should be added as an award.
 
-#### Company Specific Keywords
-
-Support for company specific keywords via a `keywords` array. If present, each entry in the array will be rendered as a chip alongside the specific company.
-
-```json
-"work": [{
-    "keywords": [
-      "TypeScript",
-      "Express.js"
-    ]
-  }
-]
-```
-
-Note: For multiple positions at the same company, the `keywords` for the most recent position are used.
-
-#### Company Logos
-
-A `work` entry can optionally have company logo via the `image` property which will be displayed in the header section for each company.
-
-```json
-"work": [
-  {
-    "image": "company-logo.jpg",
-  }
-]
-```
-
-## License
-
-Licensed under [MIT](https://choosealicense.com/licenses/mit/).
 
